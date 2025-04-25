@@ -26,7 +26,7 @@ public class Menu {
         }
     }
 
-    //showMenuItem 함수 오버로딩(카테고리 메뉴 출력)
+    //카테고리 메뉴 출력
     public void showCategoryItem(List<String> list) {
         for (int i = 0; i < list.size(); i++) {
             System.out.println((i + 1) + ". " + list.get(i));
