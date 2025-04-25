@@ -53,9 +53,6 @@ public class Kiosk {
                     System.out.println("숫자만 입력해 주세요.");
                     continue;
                 }
-                if (itemInput == 0) {
-                    continue;
-                }
                 if (itemInput >= 1 && itemInput <= selectedList.size()) {
                     MenuItem chosenItem = selectedList.get(itemInput - 1);
                     System.out.println("\n선택한 메뉴: " + chosenItem);

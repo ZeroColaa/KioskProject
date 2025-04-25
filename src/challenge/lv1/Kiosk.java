@@ -1,23 +1,21 @@
-package lv4;
+package challenge.lv1;
 
 import java.util.*;
 
-
 public class Kiosk {
 
-    Menu menu;
+    private Menu menu;
 
-    Kiosk(Menu menu) {
+    public Kiosk(Menu menu) {
         this.menu = menu;
     }
 
-
-    void start() {
+    public void start() {
 
         Scanner sc = new Scanner(System.in);
         int customerInput = -1;
 
-        List<String> categories = new ArrayList<>(menu.menuMap.keySet());
+        List<String> categories = new ArrayList<>(menu.getCategories());
 
         do {
             //메인 메뉴
@@ -34,7 +32,6 @@ public class Kiosk {
             if (customerInput < 0 || customerInput > categories.size()) {
                 System.out.println("잘못된 카테고리 번호입니다.");
                 continue;
-
             }
             if (customerInput == 0) {
                 break;
@@ -44,17 +41,19 @@ public class Kiosk {
             int itemInput = -1;
             while (itemInput != 0) {
                 String selectedCategory = categories.get(customerInput - 1);
-                List<MenuItem> selectedList = menu.menuMap.get(selectedCategory);
+                List<MenuItem> selectedList = menu.getItems(selectedCategory);
 
                 System.out.println("\n[ " + selectedCategory.toUpperCase() + " MENU ]");
                 menu.showMenuItem(selectedList);
                 System.out.println("0. 뒤로가기");
 
-
                 try {
                     itemInput = Integer.parseInt(sc.nextLine());
                 } catch (NumberFormatException e) {
                     System.out.println("숫자만 입력해 주세요.");
+                    continue;
+                }
+                if (itemInput == 0) {
                     continue;
                 }
                 if (itemInput >= 1 && itemInput <= selectedList.size()) {
@@ -69,4 +68,3 @@ public class Kiosk {
         System.out.println("프로그램을 종료합니다.");
     }
 }
-
