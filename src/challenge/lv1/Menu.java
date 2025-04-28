@@ -40,10 +40,6 @@ public class Menu {
         }
     }
 
-    // List를 리턴하는 함수
-    List<MenuItem> returnList(List<MenuItem> list) {
-        return list;
-    }
 
-    // 구조에 맞게 함수를 선언해놓고 가져다 사용하세요.
+
 }
