@@ -121,7 +121,7 @@ IntStream.range(0, list.size())
 ## 2. HashMap vs LinkedHashMap vs TreeMap 차이
 
 - 메뉴 등록 순서를 유지하기 위해 LinkedHashMap 사용
-- HashMap은 순서를 보장하지 않아 사용자 UX에 부적합
+- HashMap은 순서를 보장해야 하는 프로젝트에 부적합
 
 | 구분              | HashMap                  | LinkedHashMap                  | TreeMap                     |
 |:------------------|:--------------------------|:--------------------------------|:-----------------------------|
