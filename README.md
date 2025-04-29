@@ -97,7 +97,7 @@ src/
 
 # 🛠️ 트러블슈팅 기록
 
-## 1. IntStream vs Stream 차이 이해
+## 1. IntStream vs Stream
 
 - 메뉴 리스트 출력 시 인덱스를 쉽게 관리하기 위해 IntStream.range() 사용
 - 일반 Stream은 인덱스를 다루기 불편했다.
@@ -118,7 +118,7 @@ IntStream.range(0, list.size())
 
 ---
 
-## 2. HashMap vs LinkedHashMap vs TreeMap 차이
+## 2. HashMap vs LinkedHashMap vs TreeMap
 
 - 메뉴 등록 순서를 유지하기 위해 LinkedHashMap 사용
 - HashMap은 순서를 보장해야 하는 프로젝트에 부적합
